@@ -37,8 +37,8 @@ public class FileService {
 
 	private Resource getResource(String filename, HttpServletResponse response, ResourceType resourceType) {
 		response.setContentType("text/csv; charset=utf-8");
-		response.setHeader("Content-Disposition", "attachment; filename=" + filename);
-		response.setHeader("filename", filename);
+		response.setHeader("Content-Disposition", "attachment; filename=" + filename+".csv");
+		response.setHeader("filename", filename+".csv");
 
 		Resource resource = null;
 		switch (resourceType) {
@@ -46,7 +46,7 @@ public class FileService {
 				resource = new FileSystemResource(FILE_DIRECTORY + filename);
 				break;
 			case CLASSPATH:
-				resource = new ClassPathResource("data/" + filename);
+				resource = new ClassPathResource(filename+".csv");
 				break;
 		}
 
