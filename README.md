@@ -2,6 +2,7 @@
 microservice-csv
 
 1)discovery
+
 2)student-service [used to download csv and generate csv]
 
 CSV generate by opencsv ..
@@ -24,3 +25,13 @@ please refer images
 Postgres SQL -> "university.sql".
 
 --> http://localhost:9200/api/files/classpath/users
+
+
+For run
+1) run discovery
+
+2) run student-service
+
+3) csv-download-demo-FE
+-npm install 
+-npm start
